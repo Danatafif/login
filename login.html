@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Terproteksi</title>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "sandiAnda") { // Ganti "sandiAnda" dengan sandi yang Anda inginkan
+                document.getElementById("protectedContent").style.display = "block";
+                document.getElementById("passwordForm").style.display = "none";
+            } else {
+                alert("Sandi salah, coba lagi!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="passwordForm">
+        <h2>Masukkan Sandi</h2>
+        <input type="password" id="password" placeholder="Sandi">
+        <button onclick="checkPassword()">Masuk</button>
+    </div>
+
+    <div id="protectedContent" style="display:none;">
+        <h2>Konten Terproteksi</h2>
+        <p>Ini adalah konten yang hanya bisa dilihat setelah memasukkan sandi yang benar.</p>
+    </div>
+</body>
+</html>
